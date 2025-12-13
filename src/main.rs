@@ -131,6 +131,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                         .details(&artist)
                         .state(&title)
                         .assets(Assets::new().large_image("logo"))
+                        .status_display_type(
+                            discord_rich_presence::activity::StatusDisplayType::Details,
+                        )
                         .buttons(vec![Button::new(
                             "Listen on Apple Music",
                             "https://notimplemented.yet",
